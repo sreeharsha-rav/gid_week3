@@ -10,8 +10,8 @@ public class RegistrationPortal {
         this.registeredStudents = new ArrayList<Student>();
     }
 
-    // Method to get the instance of RegistrationPortal
-    public static RegistrationPortal getRegistrationPortal() {
+    // Method to get the instance of RegistrationPortal, make sure only one instance is created
+    public static synchronized RegistrationPortal getRegistrationPortal() {
         // If registrationPortal is null, create a new instance of RegistrationPortal
         if (registrationPortal == null) {
             registrationPortal = new RegistrationPortal();

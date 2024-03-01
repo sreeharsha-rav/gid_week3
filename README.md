@@ -9,7 +9,8 @@ Submitted by Sreeharsha Raveendra
 `students_registration` folder contains the following files:
 - RegistrationPortal.java
 - Student.java
-- Test.java
+- MyRunnable.java
+- App.java
 
 ### Java: Bank Chat Bot
 
