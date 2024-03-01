@@ -5,13 +5,19 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         String message;
         double balance;
+
+        // Input number of requests
+        System.out.println("Enter the number of requests: ");
+        int requests = scanner.nextInt();
+        scanner.nextLine();
+
         // Create a new BankOperations object
         BankOperations bank = new BankOperations();
 
         // Chat bot interaction
         System.out.println("***** Welcome to the Bank Chat Bot *****");
         try {
-            while (true) {
+            while (requests > 0) {
                 // Get the user input
                 System.out.println("What would you like to do?");
                 message = scanner.nextLine();
@@ -20,9 +26,11 @@ public class App {
                 // Display the result
                 System.out.println("Your current balance is: " + balance);
                 System.out.println("-----------------------------");
+                requests--;
             }
         } catch (Exception e) {
             System.out.println("An error occurred: " + e.getMessage());
         }
+        scanner.close();
     }
 }
